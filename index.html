@@ -5,131 +5,54 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Amirix</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
-
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Cairo',sans-serif;
-}
-
 body{
-height:100vh;
+margin:0;
+font-family:Arial;
+background:#070b18;
 display:flex;
 justify-content:center;
 align-items:center;
-background:
-radial-gradient(circle at right,
-rgba(115,103,240,.35),
-transparent 35%),
-#030b1f;
-overflow:hidden;
+height:100vh;
 }
 
 .card{
-width:500px;
-background:#0b1731;
-border-radius:30px;
-padding:35px;
-color:white;
-box-shadow:0 0 40px rgba(0,0,0,.4);
-}
-
-.lang{
-background:#1b294a;
-border:none;
-color:white;
-padding:12px 18px;
-border-radius:18px;
-cursor:pointer;
-}
-
-.logo{
-width:90px;
-height:90px;
-margin:25px auto;
+width:420px;
+background:#0d1630;
+padding:30px;
 border-radius:25px;
-background:#1b294a;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:45px;
+color:white;
+text-align:center;
 }
 
 h1{
-text-align:center;
-font-size:48px;
-font-weight:700;
-}
-
-.subtitle{
-text-align:center;
-color:#b4bfdc;
-margin-top:10px;
-margin-bottom:30px;
-}
-
-label{
-display:block;
-margin-bottom:8px;
-margin-top:20px;
+margin-bottom:10px;
 }
 
 input{
 width:100%;
-height:60px;
-background:#071122;
+padding:15px;
+margin-top:15px;
 border:none;
-border-radius:18px;
-padding:0 20px;
+border-radius:12px;
+background:#111c3a;
 color:white;
-font-size:16px;
 }
 
-.btn{
+button{
 width:100%;
-height:60px;
-margin-top:25px;
-border:none;
-border-radius:18px;
-font-size:22px;
-font-weight:bold;
-color:white;
-cursor:pointer;
-background:linear-gradient(90deg,#6c63ff,#7b73ff);
-}
-
-.line{
-height:1px;
-background:#223457;
-margin:30px 0;
-}
-
-.contact{
-text-align:center;
-color:#c9d3f0;
-}
-
-.social{
-display:flex;
-justify-content:center;
-gap:20px;
+padding:15px;
 margin-top:20px;
+border:none;
+border-radius:12px;
+background:#6c63ff;
+color:white;
+font-size:18px;
+cursor:pointer;
 }
 
-.social a{
-width:55px;
-height:55px;
-background:#1b294a;
-border-radius:15px;
-display:flex;
-justify-content:center;
-align-items:center;
-text-decoration:none;
-font-size:24px;
-color:white;
+button:hover{
+background:#5750e6;
 }
 </style>
 </head>
@@ -137,34 +60,19 @@ color:white;
 <body>
 
 <div class="card">
-
-<button class="lang">🌐 English</button>
-
-<div class="logo">🤖</div>
-
 <h1>Amirix</h1>
 
-<p class="subtitle">أدخل بياناتك للمتابعة</p>
+<input type="text" placeholder="ID">
+<input type="text" placeholder="Name">
 
-<label>معرف المستخدم (ID)</label>
-<input type="text" placeholder="أدخل الآيدي">
-
-<label>الاسم</label>
-<input type="text" placeholder="أدخل اسمك">
-
-<button class="btn">دخول</button>
-
-<div class="line"></div>
-
-<p class="contact">تواصل معنا</p>
-
-<div class="social">
-<a href="#">✈️</a>
-<a href="#">📷</a>
-<a href="#">🎮</a>
+<button onclick="go()">دخول</button>
 </div>
 
-</div>
+<script>
+function go(){
+window.location.href = "dashboard.html";
+}
+</script>
 
 </body>
 </html>
