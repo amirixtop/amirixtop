@@ -3,55 +3,166 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M2_BYTE</title>
+<title>Amirix</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:
+radial-gradient(circle at right,
+rgba(115,103,240,.35),
+transparent 35%),
+#030b1f;
+overflow:hidden;
+}
+
+.card{
+width:500px;
+background:#0b1731;
+border-radius:30px;
+padding:35px;
+color:white;
+box-shadow:0 0 40px rgba(0,0,0,.4);
+}
+
+.lang{
+background:#1b294a;
+border:none;
+color:white;
+padding:12px 18px;
+border-radius:18px;
+cursor:pointer;
+}
+
+.logo{
+width:90px;
+height:90px;
+margin:25px auto;
+border-radius:25px;
+background:#1b294a;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:45px;
+}
+
+h1{
+text-align:center;
+font-size:48px;
+font-weight:700;
+}
+
+.subtitle{
+text-align:center;
+color:#b4bfdc;
+margin-top:10px;
+margin-bottom:30px;
+}
+
+label{
+display:block;
+margin-bottom:8px;
+margin-top:20px;
+}
+
+input{
+width:100%;
+height:60px;
+background:#071122;
+border:none;
+border-radius:18px;
+padding:0 20px;
+color:white;
+font-size:16px;
+}
+
+.btn{
+width:100%;
+height:60px;
+margin-top:25px;
+border:none;
+border-radius:18px;
+font-size:22px;
+font-weight:bold;
+color:white;
+cursor:pointer;
+background:linear-gradient(90deg,#6c63ff,#7b73ff);
+}
+
+.line{
+height:1px;
+background:#223457;
+margin:30px 0;
+}
+
+.contact{
+text-align:center;
+color:#c9d3f0;
+}
+
+.social{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-top:20px;
+}
+
+.social a{
+width:55px;
+height:55px;
+background:#1b294a;
+border-radius:15px;
+display:flex;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+font-size:24px;
+color:white;
+}
+</style>
 </head>
-<body>
 
-<div class="bg"></div>
+<body>
 
 <div class="card">
 
-    <div class="top-bar">
-        <button class="lang-btn">
-            English 🌐
-        </button>
-    </div>
+<button class="lang">🌐 English</button>
 
-    <div class="logo-box">
-        🤖
-    </div>
+<div class="logo">🤖</div>
 
-    <h1>M2_BYTE</h1>
-    <p class="subtitle">أدخل بياناتك للمتابعة</p>
+<h1>Amirix</h1>
 
-    <div class="form-group">
-        <label>معرف المستخدم (ID)</label>
-        <input type="text" placeholder="أدخل الايدي الخاص">
-    </div>
+<p class="subtitle">أدخل بياناتك للمتابعة</p>
 
-    <div class="form-group">
-        <label>الاسم</label>
-        <input type="text" placeholder="أدخل اسمك">
-    </div>
+<label>معرف المستخدم (ID)</label>
+<input type="text" placeholder="أدخل الآيدي">
 
-    <button class="login-btn">
-        دخول
-    </button>
+<label>الاسم</label>
+<input type="text" placeholder="أدخل اسمك">
 
-    <div class="divider"></div>
+<button class="btn">دخول</button>
 
-    <p class="contact-title">تواصل معنا</p>
+<div class="line"></div>
 
-    <div class="socials">
-        <a href="#">✈️</a>
-        <a href="#">📷</a>
-        <a href="#">🎮</a>
-    </div>
+<p class="contact">تواصل معنا</p>
+
+<div class="social">
+<a href="#">✈️</a>
+<a href="#">📷</a>
+<a href="#">🎮</a>
+</div>
 
 </div>
 
