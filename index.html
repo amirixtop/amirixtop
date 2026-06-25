@@ -1,9 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
-    <title>Message</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تسجيل الدخول</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Tahoma,sans-serif;
+    background:linear-gradient(135deg,#4f46e5,#7c3aed);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    color:white;
+}
+
+.box{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:20px;
+    width:350px;
+    text-align:center;
+    box-shadow:0 0 25px rgba(0,0,0,.3);
+}
+
+img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+input{
+    width:90%;
+    padding:12px;
+    margin:8px 0;
+    border:none;
+    border-radius:10px;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    background:#22c55e;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+#result{
+    display:none;
+}
+</style>
 </head>
 <body>
-    <h1>vlexiro gay</h1>
+
+<div class="box" id="login">
+    <img src="https://picsum.photos/200" alt="صورة">
+    <h2>أهلاً بك</h2>
+    <p>أدخل اسمك ولقبك للدخول</p>
+
+    <input type="text" id="name" placeholder="الاسم">
+    <input type="text" id="surname" placeholder="اللقب">
+    <br>
+    <button onclick="enterSite()">دخول</button>
+</div>
+
+<div class="box" id="result">
+    <img src="https://picsum.photos/201" alt="صورة">
+    <h1 id="message"></h1>
+</div>
+
+<script>
+function enterSite(){
+    const name = document.getElementById("name").value;
+    const surname = document.getElementById("surname").value;
+
+    document.getElementById("login").style.display="none";
+    document.getElementById("result").style.display="block";
+
+    document.getElementById("message").textContent =
+        `مرحباً ${name} ${surname}، كل خرا في وجهك`;
+}
+</script>
+
 </body>
 </html>
