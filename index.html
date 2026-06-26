@@ -3,91 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>تسجيل الدخول</title>
-
-<style>
-body{
-    margin:0;
-    font-family:Tahoma,sans-serif;
-    background:linear-gradient(135deg,#4f46e5,#7c3aed);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    color:white;
-}
-
-.box{
-    background:rgba(255,255,255,0.12);
-    backdrop-filter:blur(10px);
-    padding:30px;
-    border-radius:20px;
-    width:350px;
-    text-align:center;
-    box-shadow:0 0 25px rgba(0,0,0,.3);
-}
-
-img{
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:15px;
-}
-
-input{
-    width:90%;
-    padding:12px;
-    margin:8px 0;
-    border:none;
-    border-radius:10px;
-}
-
-button{
-    padding:12px 25px;
-    border:none;
-    border-radius:10px;
-    background:#22c55e;
-    color:white;
-    cursor:pointer;
-    font-size:16px;
-}
-
-#result{
-    display:none;
-}
-</style>
+<title>Amirix</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="box" id="login">
-    <img src="https://picsum.photos/200" alt="صورة">
-    <h2>أهلاً بك</h2>
-    <p>أدخل اسمك ولقبك للدخول</p>
+<header>
+    <div class="logo">⚡ Amirix</div>
 
-    <input type="text" id="name" placeholder="الاسم">
-    <input type="text" id="surname" placeholder="اللقب">
-    <br>
-    <button onclick="enterSite()">دخول</button>
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="login.html">تسجيل الدخول</a>
+        <a href="register.html">إنشاء حساب</a>
+        <a href="contact.html">تواصل</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>مرحباً بك في Amirix</h1>
+
+    <p>
+        منصة عصرية بتصميم احترافي.
+    </p>
+
+    <div class="buttons">
+        <a href="login.html" class="btn">تسجيل الدخول</a>
+        <a href="register.html" class="btn2">إنشاء حساب</a>
+    </div>
+</section>
+
+<section class="cards">
+
+<div class="card">
+<h2>🚀 سرعة</h2>
+<p>واجهة سريعة وخفيفة.</p>
 </div>
 
-<div class="box" id="result">
-    <img src="https://picsum.photos/201" alt="صورة">
-    <h1 id="message"></h1>
+<div class="card">
+<h2>🔒 حماية</h2>
+<p>تصميم جاهز لإضافة نظام حسابات.</p>
 </div>
 
-<script>
-function enterSite(){
-    const name = document.getElementById("name").value;
-    const surname = document.getElementById("surname").value;
+<div class="card">
+<h2>🎨 تصميم</h2>
+<p>ألوان نيون جميلة ومتجاوبة.</p>
+</div>
 
-    document.getElementById("login").style.display="none";
-    document.getElementById("result").style.display="block";
+</section>
 
-    document.getElementById("message").textContent =
-        `مرحباً ${name} ${surname}، كل خرا في وجهك`;
-}
-</script>
+<footer>
+© 2026 Amirix
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
