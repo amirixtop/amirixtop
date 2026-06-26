@@ -12,27 +12,50 @@
 
 <h1>إنشاء حساب</h1>
 
-<input type="text" placeholder="الاسم">
+<input type="text" id="username" placeholder="اسم المستخدم">
 
 <br><br>
 
-<input type="text" placeholder="اللقب">
+<input type="password" id="password" placeholder="كلمة المرور">
 
 <br><br>
 
-<input type="email" placeholder="البريد الإلكتروني">
+<input type="password" id="confirm" placeholder="تأكيد كلمة المرور">
 
 <br><br>
 
-<input type="password" placeholder="كلمة المرور">
-
-<br><br>
-
-<button class="btn">
+<button class="btn" onclick="register()">
 إنشاء الحساب
 </button>
 
 </div>
+
+<script>
+function register(){
+
+const username=document.getElementById("username").value;
+const password=document.getElementById("password").value;
+const confirm=document.getElementById("confirm").value;
+
+if(username=="" || password==""){
+alert("املأ جميع الحقول");
+return;
+}
+
+if(password!==confirm){
+alert("كلمتا المرور غير متطابقتين");
+return;
+}
+
+localStorage.setItem("username",username);
+localStorage.setItem("password",password);
+
+alert("تم إنشاء الحساب بنجاح");
+
+window.location="login.html";
+
+}
+</script>
 
 </body>
 </html>
